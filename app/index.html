@@ -16,20 +16,25 @@
         <div data-code-snippet class="pattern-wrapper" ng-controller="patternController">
             <h2 class="pattern-heading">Colors</h2>
             <div class="pattern" data-ng-include="'/patterns/colors/colors.html'"></div>
-            <button ng-click="reportMarkup()">Code</button>
+            <button ng-click="showSnippet()">Code</button>
+            <button ng-click="closeSnippet()">Code</button>
         </div>
         
         <div data-code-snippet class="pattern-wrapper" ng-controller="patternController">
             <h2 class="pattern-heading">Typography</h2>
             <div class="pattern" data-ng-include="'/patterns/typography/typography.html'"></div>
-            <button ng-click="reportMarkup()">Code</button>
+            <button ng-click="showSnippet()">Code</button>
+            <button ng-click="closeSnippet()">Code</button>
         </div>
 
         <div data-code-snippet class="pattern-wrapper" ng-controller="patternController" >
             <h2 class="pattern-heading">Media Block</h2>
             <div class="pattern" data-ng-include="'/patterns/media-block/media-block.html'"></div>
             <button ng-click="showSnippet()">Code</button>
+            <button ng-click="closeSnippet()">Code</button>
         </div>
+
+
 
     </div>
 
@@ -40,29 +45,18 @@
             $scope.testVar = "test var";
         })
         .controller("patternController", function($scope, $element){
-            console.log($element)
-            function reportMarkup(){
-                console.log('reporting markup');
-                var markupString = '<pre>' + escapeMarkup() + '</pre>';
-                $element.after(markupString);                
-            }
-
-            function getContent(){
-                return $element.html();
-            }
-
-            function escapeMarkup(){
-                return getContent().replace(/&/g, '&amp;').replace(/</g, '&lt;');
-            }
-
-            $scope.reportMarkup = reportMarkup;
-
+            $scope.testVar += 'modified in patternContrller';
         });
 
         fefap.directive("codeSnippet", function(){
             return{
                 restrict: 'A',
+                controller: function($scope){
+                    console.log('directive controller')
+                    $scope.testVar += " modified in directive";
+                    console.log($scope.testVar)
 
+                },
                 link: function(scope, el, attrs){
                     console.log('code snippet');
 
@@ -75,12 +69,19 @@
                     }
 
                     function showSnippet(){
-                        console.log('showing snippet');
-                        var markupString = '<pre>' + escapeMarkup() + '</pre>';
+                        console.log(scope.testVar);
+                        var markupString = '<pre class="snippet">' + escapeMarkup() + '</pre>';
                         el.after(markupString);                
                     }
 
+                    function closeSnippet(){
+                        if(el.next().hasClass('snippet')){
+                            el.next().remove();
+                        }
+                    }
+
                     scope.showSnippet = showSnippet;
+                    scope.closeSnippet = closeSnippet;
                 }
             }
         });
