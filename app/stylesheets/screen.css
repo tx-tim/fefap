@@ -1,0 +1,455 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.3-p327@fefap/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* colors */
+/* typography */
+/**
+ * Relying on Typecsset by Harry Roberts for vertical rhythm
+ * repo: git@github.com:csswizardry/typecsset.git
+ */
+/**
+ * Relying on Typecsset by Harry Roberts
+ * repo: git@github.com:csswizardry/typecsset.git
+ */
+/*---------------------------------*\
+    #Contents
+\*---------------------------------*/
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+/**
+ * A lot of elements in Typecsset need to share some declarations (mainly for
+ * vertical rhythm), so we `@extend` some silent classes.
+ */
+/* line 86, ../patterns/typography/_typography.scss */
+h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table, .media, .guide .pattern-heading, .guide .color-swatches figure, .media .media {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 91, ../patterns/typography/_typography.scss */
+h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table, .media, .guide .pattern-heading, .guide .color-swatches figure {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+/* line 97, ../patterns/typography/_typography.scss */
+.media .media {
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/**
+ * 1. Set the base element’s `font-size` to the value of your choosing. Set in
+ *    ems, assuming a browser default of 16px.
+ * 2. Work out the unitless `line-height` for your project based around your
+ *    desired `line-height` (defined previously in pixels), and your project’s
+ *    base font size.
+ * 3. If you have chosen to display a baseline grid, we turn it on here.
+ */
+/* line 118, ../patterns/typography/_typography.scss */
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [2] */
+}
+
+/* line 132, ../patterns/typography/_typography.scss */
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/* line 144, ../patterns/typography/_typography.scss */
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* line 149, ../patterns/typography/_typography.scss */
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333;
+}
+
+/* line 154, ../patterns/typography/_typography.scss */
+h3 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6;
+}
+
+/* line 159, ../patterns/typography/_typography.scss */
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* line 164, ../patterns/typography/_typography.scss */
+h5 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+/* line 169, ../patterns/typography/_typography.scss */
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+/* line 181, ../patterns/typography/_typography.scss */
+ul, ol, dd {
+  margin-left: 48px;
+  margin-left: 3rem;
+}
+
+/* line 187, ../patterns/typography/_typography.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/*------------------------------------*\
+    #PARAGRAPHS
+\*------------------------------------*/
+/**
+ * Not strictly a paragraph, but probably doesn’t need its own section.
+ */
+/*------------------------------------*\
+    #CODE
+\*------------------------------------*/
+/**
+ * 1. Fix an odd quirk whereby, without this, code blocks are rendered at a
+ *    font-size smaller than 1em.
+ */
+/* line 238, ../patterns/typography/_typography.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* [1] */
+}
+
+/*------------------------------------*\
+    #QUOTES
+\*------------------------------------*/
+/**
+ * 1. Hang the opening quote of the blockquote.
+ */
+/* line 252, ../patterns/typography/_typography.scss */
+blockquote {
+  text-indent: -0.41em;
+  /* [1] */
+}
+
+/**
+ * Set up quote marks on quoting elements. This is very English-based, so we are
+ * using “, ”, ‘, and ’ quotes.
+ */
+/* line 260, ../patterns/typography/_typography.scss */
+blockquote {
+  quotes: "“" "”";
+  padding-left: 48px;
+  padding-left: 3rem;
+  border-left: 3px solid #e9e9e9;
+}
+/* line 268, ../patterns/typography/_typography.scss */
+blockquote p:before {
+  content: "“";
+  content: open-quote;
+}
+/* line 273, ../patterns/typography/_typography.scss */
+blockquote p:after {
+  content: "";
+  content: no-close-quote;
+}
+/* line 278, ../patterns/typography/_typography.scss */
+blockquote p:last-of-type:after {
+  content: "”";
+  content: close-quote;
+}
+
+/* line 287, ../patterns/typography/_typography.scss */
+q {
+  quotes: "‘" "’" "“" "”";
+  /**
+   * If an element opens with an inline quote, let’s hang that.
+   */
+}
+/* line 290, ../patterns/typography/_typography.scss */
+q:before {
+  content: "‘";
+  content: open-quote;
+}
+/* line 295, ../patterns/typography/_typography.scss */
+q:after {
+  content: "’";
+  content: close-quote;
+}
+/* line 300, ../patterns/typography/_typography.scss */
+q q:before {
+  content: "“";
+  content: open-quote;
+}
+/* line 305, ../patterns/typography/_typography.scss */
+q q:after {
+  content: "”";
+  content: close-quote;
+}
+/* line 313, ../patterns/typography/_typography.scss */
+q:first-child {
+  display: inline-block;
+  text-indent: -0.22em;
+}
+
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+/**
+ * Crude table styles; tables are very difficult to keep on the baseline.
+ */
+/* line 330, ../patterns/typography/_typography.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 338, ../patterns/typography/_typography.scss */
+th,
+td {
+  padding: 12px;
+}
+
+/*------------------------------------*\
+    #MISC TYPOGRAPHICAL STYLES
+\*------------------------------------*/
+/**
+ * styles for elements that were reset and other misc styles
+ */
+/* line 352, ../patterns/typography/_typography.scss */
+strong {
+  font-weight: 900;
+}
+
+/* line 356, ../patterns/typography/_typography.scss */
+em {
+  font-style: italic;
+}
+
+/* line 360, ../patterns/typography/_typography.scss */
+.dateline {
+  display: block;
+}
+
+/* line 364, ../patterns/typography/_typography.scss */
+.byline {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+/* line 1, ../patterns/grid/_grid.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 
+ * clearfix     used project wide to clear floats and create a new formatting context
+ * usage      @include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
+ * $clearfix-method sets default method
+ */
+/* line 19, ../patterns/media-block/_media-block.scss */
+.media > .mediaBody {
+  display: table-cell;
+  vertical-align: top;
+  width: 10000px !important;
+  *display: block;
+  *zoom: 1;
+  *width: auto !important;
+}
+
+/* line 31, ../patterns/media-block/_media-block.scss */
+.media {
+  zoom: 1;
+}
+/* line 35, ../patterns/media-block/_media-block.scss */
+.media:before, .media:after {
+  content: " ";
+  display: table;
+}
+/* line 39, ../patterns/media-block/_media-block.scss */
+.media:after {
+  clear: both;
+}
+
+/* line 76, ../patterns/media-block/_media-block.scss */
+.media > .mediaImg {
+  float: left;
+  margin-right: 10px;
+}
+/* line 79, ../patterns/media-block/_media-block.scss */
+.media > .mediaImg > img {
+  display: block;
+}
+/* line 83, ../patterns/media-block/_media-block.scss */
+.media > .mediaImgExt {
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+/* line 1, ../sass/_meta.scss */
+.guide {
+  width: 100%;
+  padding-left: 48px;
+  padding-left: 3rem;
+  padding-right: 48px;
+  padding-right: 3rem;
+}
+/* line 7, ../sass/_meta.scss */
+.guide .pattern-heading {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-bottom: solid 1px #e9e9e9;
+  margin-top: 48px;
+  margin-top: 3rem;
+}
+/* line 16, ../sass/_meta.scss */
+.guide .circle {
+  border: 1px solid #969696;
+  border-radius: 50%;
+}
+/* line 23, ../sass/_meta.scss */
+.guide .color-swatches figure {
+  display: inline-block;
+  text-align: center;
+  width: 144px;
+  width: 9rem;
+}
+/* line 30, ../sass/_meta.scss */
+.guide .color-swatches .caption {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+}
+/* line 37, ../sass/_meta.scss */
+.guide .color-swatches .color-swatch {
+  width: 120px;
+  width: 7.5rem;
+  height: 120px;
+  height: 7.5rem;
+  display: inline-block;
+}
+/* line 43, ../sass/_meta.scss */
+.guide .color-swatches .color-swatch.brand-primary {
+  background-color: #ca131f;
+}
+/* line 47, ../sass/_meta.scss */
+.guide .color-swatches .color-swatch.brand-secondary {
+  background-color: #4386c8;
+}
+/* line 51, ../sass/_meta.scss */
+.guide .color-swatches .color-swatch.brand-tertiary {
+  background-color: #52b134;
+}
+/* line 55, ../sass/_meta.scss */
+.guide .color-swatches .color-swatch.gray1 {
+  background-color: #fcfcfc;
+}
+/* line 59, ../sass/_meta.scss */
+.guide .color-swatches .color-swatch.gray2 {
+  background-color: #f6f6f6;
+}
+/* line 63, ../sass/_meta.scss */
+.guide .color-swatches .color-swatch.gray3 {
+  background-color: #f2f2f2;
+}
+/* line 67, ../sass/_meta.scss */
+.guide .color-swatches .color-swatch.gray4 {
+  background-color: #e9e9e9;
+}

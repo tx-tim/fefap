@@ -1,0 +1,62 @@
+
+/* colors */
+$brand-primary: #ca131f;        //verizon red
+$brand-secondary: #4386c8;      //verizon blue
+$brand-tertiary: #52b134;      //verizon green
+$background: #fcfcfc;
+$foreground: #303030;
+
+$gray1: #fcfcfc;
+$gray2: #f6f6f6;
+$gray3: #f2f2f2;
+$gray4: #e9e9e9;
+
+/* typography */
+$primary-font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$secondary-font-family: Georgia, Times, "Times New Roman", serif;
+//$base-line-height: 1.5;
+
+/**
+ * Relying on Typecsset by Harry Roberts for vertical rhythm
+ * repo: git@github.com:csswizardry/typecsset.git
+ */
+
+
+//------------------------------------\\
+    // SETTINGS
+//------------------------------------\\
+// Typecsset needs some variables setting before it can get started. Some of
+// these variables can be overriden by developers, others need to remain
+// untouched because Typecsset will assign them automatically based on what
+// you’ve told it.
+
+// What would you like your base font-size to be? Define in pixels; the library
+// will convert measurements to the most appropriate units (rems or unitless).
+$typecsset-base-font-size:      16px !default;
+$typecsset-base-line-height:    24px !default;
+
+// Heading sizes
+$typecsset-h1-size:             48px !default;
+$typecsset-h2-size:             36px !default;
+$typecsset-h3-size:             30px !default;
+$typecsset-h4-size:             24px !default;
+$typecsset-h5-size:             20px !default;
+$typecsset-h6-size:             18px !default;
+
+// Would you like indented (rather than spaced) paragraph delimiting?
+$typecsset-indented-paragraphs: false !default;
+
+// Would you like to show a baseline grid? This is handy during development.
+$typecsset-show-baseline:       false !default;
+
+// Do not modify these variables; they are internal settings upon which the
+// library depends.
+$typecsset-magic-number:        $typecsset-base-line-height;
+$typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-font-size;
+
+
+
+
+
+
+

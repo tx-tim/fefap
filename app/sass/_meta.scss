@@ -1,0 +1,74 @@
+.guide{
+
+    width: 100%;
+    @include typecsset-space(padding-left);
+    @include typecsset-space(padding-right);
+
+    .pattern-heading {
+        @extend %typecsset-vertical-rhythm;
+        @include typecsset-font-size($typecsset-base-font-size);
+
+        border-bottom: solid 1px $gray4;
+        margin-top: 2 * $typecsset-magic-number;
+        margin-top: 2 * $typecsset-magic-ratio + rem;
+    }
+
+    .circle {
+        border: 1px solid darken($gray1, 40%);
+        border-radius: 50%;
+    }
+
+    .color-swatches{
+        
+        figure{
+            @extend %typecsset-vertical-rhythm;
+            display: inline-block;
+            text-align: center;
+            @include size-on-rhythm(width, 6);
+        }
+
+        .caption{
+            display: inline-block;
+            vertical-align: bottom;
+            width: 100%;
+        }
+        
+
+        .color-swatch {
+            @include size-on-rhythm(width, 5);
+            @include size-on-rhythm(height, 5);
+            display: inline-block;
+
+            
+            &.brand-primary{
+                background-color: $brand-primary;
+            }
+            
+            &.brand-secondary{
+                background-color: $brand-secondary;
+            }
+            
+            &.brand-tertiary{
+                background-color: $brand-tertiary;
+            }
+
+            &.gray1{
+                background-color: $gray1;
+            }
+
+            &.gray2{
+                background-color: $gray2;
+            }
+
+            &.gray3{
+                background-color: $gray3;
+            }
+
+            &.gray4{
+                background-color: $gray4;
+            }
+
+        }
+    }
+}
+

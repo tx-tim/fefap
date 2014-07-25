@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <script type="text/javascript" src="/javascripts/lib/angular.min.js"></script>
+</head>
+<body data-ng-app="fefap">
+    <div class="guide" ng-controller="testController">
+        <h1>Hello gulp</h1>
+        <h2>Have some lint</h2>
+        <input type="text" data-ng-model="name" />
+        <p>Hello {{name}}</p>
+        
+        <div data-code-snippet class="pattern-wrapper" ng-controller="patternController">
+            <h2 class="pattern-heading">Colors</h2>
+            <div class="pattern" data-ng-include="'/patterns/colors/colors.html'"></div>
+            <button ng-click="reportMarkup()">Code</button>
+        </div>
+        
+        <div data-code-snippet class="pattern-wrapper" ng-controller="patternController">
+            <h2 class="pattern-heading">Typography</h2>
+            <div class="pattern" data-ng-include="'/patterns/typography/typography.html'"></div>
+            <button ng-click="reportMarkup()">Code</button>
+        </div>
+
+        <div data-code-snippet class="pattern-wrapper" ng-controller="patternController" >
+            <h2 class="pattern-heading">Media Block</h2>
+            <div class="pattern" data-ng-include="'/patterns/media-block/media-block.html'"></div>
+            <button ng-click="showSnippet()">Code</button>
+        </div>
+
+    </div>
+
+    <script>
+        var fefap = angular.module("fefap", []);
+        fefap.controller("testController", function($scope){
+            console.log("test controller");
+            $scope.testVar = "test var";
+        })
+        .controller("patternController", function($scope, $element){
+            console.log($element)
+            function reportMarkup(){
+                console.log('reporting markup');
+                var markupString = '<pre>' + escapeMarkup() + '</pre>';
+                $element.after(markupString);                
+            }
+
+            function getContent(){
+                return $element.html();
+            }
+
+            function escapeMarkup(){
+                return getContent().replace(/&/g, '&amp;').replace(/</g, '&lt;');
+            }
+
+            $scope.reportMarkup = reportMarkup;
+
+        });
+
+        fefap.directive("codeSnippet", function(){
+            return{
+                restrict: 'A',
+
+                link: function(scope, el, attrs){
+                    console.log('code snippet');
+
+                    function getContent(){
+                        return el.html();
+                    }
+
+                    function escapeMarkup(){
+                        return getContent().replace(/&/g, '&amp;').replace(/</g, '&lt;');
+                    }
+
+                    function showSnippet(){
+                        console.log('showing snippet');
+                        var markupString = '<pre>' + escapeMarkup() + '</pre>';
+                        el.after(markupString);                
+                    }
+
+                    scope.showSnippet = showSnippet;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
